@@ -40,7 +40,7 @@ function SavesCountry({ info }) {
             <div onClick={isPopupOpen == true ? closePopup : openPopup}>
 
                 <p> Name : {info.name.official}</p>
-                <p> Area : {info.area} km</p>
+                <p> Area : {info.area} km²</p>
                 <p> Capital : {info.capital}</p>
                 <p> Population : {info.population}</p>
             </div>
@@ -68,7 +68,7 @@ function SavesCountry({ info }) {
                     <div onClick={isPopupOpen == true ? closePopup : openPopup}>
 
                         <p> Name : {info.altSpellings[1]}</p>
-                        <p> Area : {info.area} km</p>
+                        <p> Area : {info.area} km²</p>
                         <p> Capital : {info.capital[0]}</p>
                         <p> Population : {info.population}</p>
                         <p> Continent : {info.continents[0]}</p>

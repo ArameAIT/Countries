@@ -12,7 +12,7 @@ function App() {
       return response.json()
     }).then((resp) => {
       const arr = []
-      for (let index = 0; index < 25; index++) {
+      for (let index = 0; index < 27; index++) {
         arr.push(resp[Math.ceil((Math.random() * 250))])
         // let randomIndex = Math.ceil(Math.random() * 250);
         // let randomValue = resp[randomIndex];
@@ -28,7 +28,6 @@ function App() {
   }, [change])
 
   const country = useSelector(getCountry)
-  console.log(country);
 
   return (
     <div>

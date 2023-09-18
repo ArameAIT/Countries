@@ -32,17 +32,16 @@ function Country({ info }) {
         const forExample = () => {
             return 1;
         };
-        ///
         return (
-            <div onClick={isPopupOpen == true ? closePopup : forExample} className='flex flex-col border border-white p-[20px] w-[400px] bg-red-600 rounded-xl text-white' >
+            <div onClick={isPopupOpen == true ? closePopup : forExample} className='flex flex-col border border-white p-[20px] w-[400px] h-[400px] bg-red-600 rounded-xl text-white' >
 
                 <div onClick={isPopupOpen == true ? closePopup : openPopup} className='w-full flex justify-center items-center'>
-                    <img src={info.flags.png == null ? "/noImage.png" : info.flags.png} />
+                    <img className='border rounded-3xl ' src={info.flags.png == null ? "/noImage.png" : info.flags.png} />
                 </div>
                 <div onClick={isPopupOpen == true ? closePopup : openPopup}>
 
                     <p> Name : {info.name.official}</p>
-                    <p> Area : {info.area} km</p>
+                    <p> Area : {info.area} km²</p>
                     <p> Capital : {info.capital}</p>
                     <p> Population : {info.population}</p>
                 </div>
@@ -65,18 +64,18 @@ function Country({ info }) {
                 {isPopupOpen && (
                     <div onClick={isPopupOpen == true ? closePopup : openPopup} className='text-white fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-600 p-9 rounded shadow-lg '>
                         <div className='w-full'>
-                            <img src={info.flags.png == null ? "/noImage.png" : info.flags.png} alt="/noimage.png" />
+                            <img className='border rounded-3xl' src={info.flags.png == null ? "/noImage.png" : info.flags.png} alt="/noimage.png" />
                         </div>
                         <div onClick={isPopupOpen == true ? closePopup : openPopup}>
 
-                            <p> Name : {info.altSpellings[1]}</p>
-                            <p> Area : {info.area} km</p>
-                            <p> Capital : {info.capital[0]}</p>
+                            <p> Name : {info.name.official}</p>
+                            <p> Area : {info.area} km²</p>
+                            <p> Capital : {info.capital}</p>
                             <p> Population : {info.population}</p>
                             <p> Continent : {info.continents[0]}</p>
                             <p>Region : {info.region}</p>
-
-
+                            <p>Subregion : {info.subregion}</p>
+                            <p>Status : {info.status}</p>
                         </div>
                         <div className='flex justify-between items-center'>
                             <div>
